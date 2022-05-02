@@ -4,6 +4,8 @@ import ExpenseForm from './ExpenseForm';
 import './NewExpense.css'
 
 const NewExpense = (props) => {
+  
+
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData ={
       ...enteredExpenseData,
@@ -12,12 +14,13 @@ const NewExpense = (props) => {
     props.onAddExpense(expenseData)
   }
     return(
-        <div className='new-expense'>
-          <ExpenseForm 
-          onSaveExpenseData={saveExpenseDataHandler} 
-          onRouteChange={props.onRouteChange}
-          />
-        </div>
+      <div className='new-expense'>
+        <ExpenseForm 
+        onSaveExpenseData={saveExpenseDataHandler} 
+        onRouteChange={props.onRouteChange}
+        />
+      </div>
+
     )
 }
 
